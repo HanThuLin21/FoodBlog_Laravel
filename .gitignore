@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+vendor/
+
+# Environment variables
+.env
+.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+
+# Build outputs
+/frontend/dist/
+/backend/public/hot
+/backend/public/storage
+/backend/storage/*.key

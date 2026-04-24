@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+  background: #8B4513; 
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-left: 25px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #FFA500; 
+}
+
+.btn-signup {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background: white;
+  color: #8B4513; 
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  color: #333; 
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Adjustments for the user account dropdown */
+.user_account {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user_account i {
+  font-size: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../image/background.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #FFA500; 
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #FF8C00; 
+}
+
+/* Featured Recipes */
+.featured {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.featured h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.recipe {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-10px);
+}
+
+.recipe img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe h3 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.btn-recipe {
+  display: inline-block;
+  background: #8B4513; 
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition: background 0.3s ease;
+}
+
+.btn-recipe:hover {
+  background: #A0522D; 
+}
+
+/* Blog Section */
+.blog {
+  background: #FFF8DC; 
+  padding: 50px 0;
+}
+
+.blog h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.post {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-10px);
+}
+
+.post-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-context {
+  padding: 20px;
+}
+
+.post-context span {
+  font-size: 14px;
+  color: #888;
+}
+
+.post-context h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.post-context p {
+  font-size: 16px;
+  color: #555;
+}
+
+.btn-read {
+  display: inline-block;
+  color: #FFA500;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.btn-read:hover {
+  color: #FF8C00; 
+}
+
+/* Subscription Section */
+.subscribe {
+  background: #8B4513; 
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.subscribe h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.subscribe input {
+  padding: 12px;
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.subscribe button {
+  padding: 12px 30px;
+  background: #FFA500; 
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe button:hover {
+  background: #FF8C00; 
+}
+
+/* Footer */
+footer {
+  background: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #FFA500; 
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hamburger Menu */
+  .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+  }
+
+  .hamburger span {
+      width: 100%;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+  }
+
+  /* Hide the regular nav menu on mobile */
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      background: #8B4513;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list.active {
+      display: flex;
+  }
+
+  .nav-list li {
+      margin: 10px 0;
+  }
+
+  .dropdown-menu {
+      position: static;
+      background: transparent;
+      box-shadow: none;
+  }
+
+  .dropdown-menu a {
+      color: white;
+  }
+
+  /* Adjust hero section for mobile */
+  .hero-content h1 {
+      font-size: 36px;
+  }
+
+  .hero-content p {
+      font-size: 16px;
+  }
+
+  /* Adjust featured recipes and blog posts for mobile */
+  .recipes, .posts {
+      grid-template-columns: 1fr;
+  }
+
+  .recipe, .post {
+      margin-bottom: 20px;
+  }
+
+  /* Adjust subscription form for mobile */
+  .subscribe input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .subscribe button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  .logo {
+      font-size: 20px;
+  }
+
+  .hero-content h1 {
+      font-size: 28px;
+  }
+
+  .hero-content p {
+      font-size: 14px;
+  }
+
+  .featured h2, .blog h2, .subscribe h2 {
+      font-size: 28px;
+  }
+
+  .recipe h3, .post-context h3 {
+      font-size: 20px;
+  }
+
+  .post-context p {
+      font-size: 14px;
+  }
+}

@@ -1,0 +1,111 @@
+body{
+    width: 100%;
+    min-height:100vh ;
+    background-image: url('images/images/685.jpg');
+    background-repeat: no-repeat;
+
+}
+header{
+    height: 60px;
+    width: 100%;
+    background:brown;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+.containers{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+    display:inline;
+    margin-right:25px ;
+    font-weight: 550;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    font-size: 24px;
+    color: white;
+}
+.btn-signup{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+}
+.btn-signup:hover{
+    background-color: white;
+    color: black;
+}
+
+.container{
+    justify-content: center;
+}
+.white-box {
+    background-color:white;
+    max-width: 490px;
+    padding: 200px;
+    width: 10px;
+    height: 85px;
+    text-align: center;
+    border-radius: 7px;
+}
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input-box{
+    display: flex;
+    width: 400px;
+    border-radius: 0.5rem;
+    background-color: rgba(128,128,128,0.25);
+    padding: 0.75rem 1rem;
+    margin: 10px auto;
+    height: 27px;
+    width: 80%;
+}
+.input-box>svg{
+    margin-top: 3px;
+}
+input{
+    outline: 0;
+    border: 0;
+    background: transparent;
+    margin-left: 10px;
+}
+h1{
+    color:black;
+    font-weight: 500;
+    font-size: 40px;
+}
+#formbox > form > button{
+font-weight: 500;
+font-size: 20px;
+margin-top: 1rem;
+width: 90%;
+}
+#formbox > p{
+    margin-top: 1rem;
+}
+#formbox > p >a {
+text-decoration-line: underline;
+}
+.btn-pink-filled{
+    width: 45%;
+    background-color: black;
+    color: white;
+    height: 90%;
+}

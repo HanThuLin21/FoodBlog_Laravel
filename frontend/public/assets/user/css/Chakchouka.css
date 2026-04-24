@@ -1,0 +1,86 @@
+
+
+header{
+    height: 60px;
+    width: 100%;
+    background: brown;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+header h1{
+    color: white;
+}
+.container1{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+    display:inline;
+    margin-right:25px ;
+    font-weight: 550;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    font-size: 24px;
+}
+
+.btn-signup{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+}
+.btn-signup:hover{
+    background-color: white;
+    color: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8ebe4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container {
+    background: white;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h1 {
+    color: #d9534f;
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.instructions {
+    text-align: left;
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+    
+}
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
