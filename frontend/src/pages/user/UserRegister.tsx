@@ -35,7 +35,7 @@ export default function UserRegister() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/user/register', {
+      const response = await axios.post('/user/register', {
         username: formData.username,
         email: formData.email,
         phone: formData.phone,

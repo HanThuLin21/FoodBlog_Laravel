@@ -22,7 +22,7 @@ export default function BlogPost() {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get('http://localhost:8000/api/blogposts')
+    axios.get('/blogposts')
       .then(res => {
         setPosts(res.data);
         setIsLoading(false);
@@ -52,7 +52,7 @@ export default function BlogPost() {
       return;
     }
     // Usually we would send this to the backend
-    // axios.post('http://localhost:8000/api/ratings', { post_id: selectedPostId, rating })
+    // axios.post('/ratings', { post_id: selectedPostId, rating })
     alert('Thank you for rating!');
     closePopup();
   };

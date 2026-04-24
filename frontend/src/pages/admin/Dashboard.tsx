@@ -13,7 +13,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get('http://localhost:8000/api/admin/stats')
+    axios.get('/admin/stats')
       .then(res => {
         setStats(res.data);
       })

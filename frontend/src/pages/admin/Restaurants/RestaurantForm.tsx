@@ -25,7 +25,7 @@ export default function RestaurantForm() {
 
   useEffect(() => {
     if (isEditing) {
-      axios.get(`http://localhost:8000/api/restaurants/${id}`)
+      axios.get(`/restaurants/${id}`)
         .then(res => {
           const rest = res.data;
           setFormData({
@@ -66,8 +66,8 @@ export default function RestaurantForm() {
     } : formData;
 
     const apiCall = isEditing 
-      ? axios.put(`http://localhost:8000/api/restaurants/${id}`, payload)
-      : axios.post('http://localhost:8000/api/restaurants', payload);
+      ? axios.put(`/restaurants/${id}`, payload)
+      : axios.post('/restaurants', payload);
 
     apiCall
       .then(() => {

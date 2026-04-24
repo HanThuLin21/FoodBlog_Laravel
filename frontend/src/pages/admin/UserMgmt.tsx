@@ -15,7 +15,7 @@ export default function UserMgmt() {
 
   const fetchUsers = () => {
     setIsLoading(true);
-    axios.get('http://localhost:8000/api/users')
+    axios.get('/users')
       .then(res => setUsers(res.data))
       .catch(err => console.error(err))
       .finally(() => setIsLoading(false));
@@ -27,7 +27,7 @@ export default function UserMgmt() {
 
   const handleDelete = (id: number) => {
     if (window.confirm("Are you sure you want to remove this user?")) {
-      axios.delete(`http://localhost:8000/api/users/${id}`)
+      axios.delete(`/users/${id}`)
         .then(() => {
           setUsers(users.filter(u => u.user_id !== id));
         })

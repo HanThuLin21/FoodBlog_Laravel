@@ -19,7 +19,7 @@ export default function Recipe() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/recipes')
+    axios.get('/recipes')
       .then(res => setRecipes(res.data))
       .catch(err => console.error(err));
   }, []);

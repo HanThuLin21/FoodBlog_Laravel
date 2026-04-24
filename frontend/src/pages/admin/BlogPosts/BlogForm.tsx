@@ -19,7 +19,7 @@ export default function BlogForm() {
 
   useEffect(() => {
     if (isEditing) {
-      axios.get(`http://localhost:8000/api/blogposts/${id}`)
+      axios.get(`/blogposts/${id}`)
         .then(res => {
           const post = res.data;
           setFormData({
@@ -47,8 +47,8 @@ export default function BlogForm() {
     setIsLoading(true);
 
     const apiCall = isEditing 
-      ? axios.put(`http://localhost:8000/api/blogposts/${id}`, formData)
-      : axios.post('http://localhost:8000/api/blogposts', formData);
+      ? axios.put(`/blogposts/${id}`, formData)
+      : axios.post('/blogposts', formData);
 
     apiCall
       .then(() => {

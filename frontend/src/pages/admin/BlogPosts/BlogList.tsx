@@ -19,7 +19,7 @@ export default function BlogList() {
 
   const fetchBlogs = () => {
     setIsLoading(true);
-    axios.get('http://localhost:8000/api/blogposts')
+    axios.get('/blogposts')
       .then(res => setBlogs(res.data))
       .catch(err => console.error(err))
       .finally(() => setIsLoading(false));
@@ -31,7 +31,7 @@ export default function BlogList() {
 
   const handleDelete = (id: number) => {
     if (window.confirm("Are you sure you want to delete this blog post?")) {
-      axios.delete(`http://localhost:8000/api/blogposts/${id}`)
+      axios.delete(`/blogposts/${id}`)
         .then(() => {
           setBlogs(blogs.filter(b => b.post_id !== id));
         })

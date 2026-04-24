@@ -38,7 +38,7 @@ export default function SeeViewRestaurant() {
   useEffect(() => {
     setIsLoading(true);
     // Fetch restaurant details
-    axios.get(`http://localhost:8000/api/restaurants/${id}`)
+    axios.get(`/restaurants/${id}`)
       .then(res => {
         setRestaurant(res.data);
       })
@@ -48,7 +48,7 @@ export default function SeeViewRestaurant() {
 
   useEffect(() => {
     if (restaurant) {
-      axios.get('http://localhost:8000/api/recipes')
+      axios.get('/recipes')
         .then(res => {
           const filtered = res.data.filter((r: RecipeType) => r.foodtype === restaurant.foodtype);
           setRecipes(filtered);

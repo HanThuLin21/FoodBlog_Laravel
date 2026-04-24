@@ -25,12 +25,12 @@ export default function Home() {
 
   useEffect(() => {
     // Fetch Recipes
-    axios.get('http://localhost:8000/api/recipes')
+    axios.get('/recipes')
       .then(res => setRecipes(res.data.slice(0, 5)))
       .catch(err => console.error(err));
 
     // Fetch Blog Posts
-    axios.get('http://localhost:8000/api/blogposts')
+    axios.get('/blogposts')
       .then(res => setPosts(res.data.slice(0, 5)))
       .catch(err => console.error(err));
   }, []);

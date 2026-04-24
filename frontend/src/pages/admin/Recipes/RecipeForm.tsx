@@ -24,7 +24,7 @@ export default function RecipeForm() {
 
   useEffect(() => {
     if (isEditing) {
-      axios.get(`http://localhost:8000/api/recipes/${id}`)
+      axios.get(`/recipes/${id}`)
         .then(res => {
           const recipe = res.data;
           setFormData({
@@ -57,8 +57,8 @@ export default function RecipeForm() {
     setIsLoading(true);
 
     const apiCall = isEditing 
-      ? axios.put(`http://localhost:8000/api/recipes/${id}`, formData)
-      : axios.post('http://localhost:8000/api/recipes', formData);
+      ? axios.put(`/recipes/${id}`, formData)
+      : axios.post('/recipes', formData);
 
     apiCall
       .then(() => {

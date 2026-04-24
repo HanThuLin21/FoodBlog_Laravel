@@ -36,11 +36,11 @@ export default function ViewRecipe() {
   useEffect(() => {
     setIsLoading(true);
     // Fetch recipe details
-    axios.get(`http://localhost:8000/api/recipes/${id}`)
+    axios.get(`/recipes/${id}`)
       .then(res => {
         setRecipe(res.data);
         // Fetch all restaurants and filter by foodtype locally
-        return axios.get('http://localhost:8000/api/restaurants');
+        return axios.get('/restaurants');
       })
       .then(res => {
         if (recipe) {
@@ -57,7 +57,7 @@ export default function ViewRecipe() {
   // A more robust way to handle the dependent fetch:
   useEffect(() => {
     if (recipe) {
-      axios.get('http://localhost:8000/api/restaurants')
+      axios.get('/restaurants')
         .then(res => {
           const filtered = res.data.filter((r: RestaurantType) => r.foodtype === recipe.foodtype);
           setRestaurants(filtered);

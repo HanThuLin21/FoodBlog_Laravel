@@ -45,8 +45,8 @@ export default function DetailedBlogPost() {
     setIsLoading(true);
     // Fetch post and comments
     Promise.all([
-      axios.get(`http://localhost:8000/api/blogposts/${id}`),
-      axios.get(`http://localhost:8000/api/comments/${id}`)
+      axios.get(`/blogposts/${id}`),
+      axios.get(`/comments/${id}`)
     ])
     .then(([postRes, commentsRes]) => {
       setPost(postRes.data);
@@ -67,7 +67,7 @@ export default function DetailedBlogPost() {
     // We inject the rating into the comment text so it displays
     const finalCommentText = `[Rating: ${rating} Stars] ` + commentText;
 
-    axios.post('http://localhost:8000/api/comments', {
+    axios.post('/comments', {
       post_id: id,
       user_id: user.user_id,
       commenttext: finalCommentText
@@ -94,7 +94,7 @@ export default function DetailedBlogPost() {
   const handleDeleteComment = (commentId: number) => {
     if (!window.confirm("Are you sure you want to delete this comment?")) return;
 
-    axios.delete(`http://localhost:8000/api/comments/${commentId}`)
+    axios.delete(`/comments/${commentId}`)
       .then(() => {
         setComments(comments.filter(c => c.comment_id !== commentId));
       })

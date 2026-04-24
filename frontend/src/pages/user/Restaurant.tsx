@@ -19,7 +19,7 @@ export default function Restaurant() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/restaurants')
+    axios.get('/restaurants')
       .then(res => setRestaurants(res.data))
       .catch(err => console.error(err));
   }, []);

@@ -17,7 +17,7 @@ export default function RestaurantList() {
 
   const fetchRestaurants = () => {
     setIsLoading(true);
-    axios.get('http://localhost:8000/api/restaurants')
+    axios.get('/restaurants')
       .then(res => setRestaurants(res.data))
       .catch(err => console.error(err))
       .finally(() => setIsLoading(false));
@@ -29,7 +29,7 @@ export default function RestaurantList() {
 
   const handleDelete = (id: number) => {
     if (window.confirm("Are you sure you want to delete this restaurant?")) {
-      axios.delete(`http://localhost:8000/api/restaurants/${id}`)
+      axios.delete(`/restaurants/${id}`)
         .then(() => {
           setRestaurants(restaurants.filter(r => r.restaurant_id !== id));
         })

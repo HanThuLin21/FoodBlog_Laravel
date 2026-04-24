@@ -18,7 +18,7 @@ export default function RecipeList() {
 
   const fetchRecipes = () => {
     setIsLoading(true);
-    axios.get('http://localhost:8000/api/recipes')
+    axios.get('/recipes')
       .then(res => setRecipes(res.data))
       .catch(err => console.error(err))
       .finally(() => setIsLoading(false));
@@ -30,7 +30,7 @@ export default function RecipeList() {
 
   const handleDelete = (id: number) => {
     if (window.confirm("Are you sure you want to delete this recipe?")) {
-      axios.delete(`http://localhost:8000/api/recipes/${id}`)
+      axios.delete(`/recipes/${id}`)
         .then(() => {
           setRecipes(recipes.filter(r => r.recipe_id !== id));
         })
