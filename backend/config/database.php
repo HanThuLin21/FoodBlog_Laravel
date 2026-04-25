@@ -99,6 +99,16 @@ return [
             'sslmode' => env('DB_SSLMODE', 'prefer'),
         ],
 
+        'pgsql_render' => [
+            'driver' => 'pgsql',
+            'url' => env('DB_RENDER_URL'),
+            'charset' => env('DB_CHARSET', 'utf8'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'search_path' => 'public',
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
+        ],
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DB_URL'),
